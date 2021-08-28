@@ -57,7 +57,7 @@ In detail with this component you can :
 - See error state
 - Choose to disable input
 - Choose to have helper text
-- Choose to have an icon on the left or right (Use Google Icon and at least 5 variants)
+- Choose to have an icon on the left or right
 - Have different input sizes
 - Have different colors
 - Choose to have input take the width of the parent
