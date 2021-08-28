@@ -1,6 +1,4 @@
-<!-- Please update value in the {}  -->
-
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">My Input Component</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +6,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://eugene0m.github.io/input-component/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/eugene0m/input-component/blob/main/main.js">
       Solution
     </a>
     <span> | </span>
@@ -31,62 +29,85 @@
 - [Features](#features)
 - [How to use](#how-to-use)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 <!-- OVERVIEW -->
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://i.imgur.com/J0VDEKU.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+Same as my [Button Component](https://github.com/eugene0m/button-component) but with Inputs.
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+It is a component that produces an input with various properties.
+
+This includes the possibility to add an icon before and after the input field, or to choose its size, its color, or to choose to make it a textarea with the number of lines or not for example, or simply to disable it...
+
+Also, a dynamic text field automatically matches the properties chosen in the input component, for example :
+
+```javascript
+<InputCpt startIcon="phone" error></InputCpt>
+```
+The text field (span) above this input will be the following:
+```
+<Input startIcon="phone" error />
+```
+
+In detail with this component you can :
+
+- See error state
+- Choose to disable input
+- Choose to have helper text
+- Choose to have an icon on the left or right (Use Google Icon and at least 5 variants)
+- Have different input sizes
+- Have different colors
+- Choose to have input take the width of the parent
+- Have multiline input like a textarea
+- When you hover or focus, you can see visual indicators
+- You can still access all input attributes
 
 ### Built With
 
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-
-- [React](https://reactjs.org/)
 - [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- HTML/CSS
+- [Google Material Icons](https://google.github.io/material-design-icons/)
 
 ## Features
-
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp) was to build an application to complete the given user stories.
 
 ## How To Use
 
-<!-- Example:  -->
+The component is contained in a single JS file as well as the style and its own input classes.
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+You just have to clone the repo and include the file ``main.js`` in your own ``index.html`` or other (you can also keep the basic index.html)
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
-
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
+$ git clone https://github.com/eugene0m/input-component.git
 ```
 
-## Acknowledgements
+Finally you can call the component via the ``<InputCpt />`` tag, for example :
 
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
+```html
+<InputCpt helperText="Some interesting text"></InputCpt>
+```
 
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
+This will give:
+
+![inputscreenshoot](https://i.imgur.com/UoGoUeP.png)
+
+Here is the list of props of the component:
+
+- **error** which gives the error status to the input
+- **disabled** which disables the input
+- **helpertext** which receives a text value and adds a small text below the input
+- **starticon** which receives as value a google icon (see google website) on the left of the input
+- **endicon** which receives as value a google icon (see the google website) on the right of the input
+- **value** which receives a text value and modifies the html value of the field
+- **size** which receives `sm` or `md` and gives a certain size to the input
+- **fullwidth** which gives the input a size that takes 100% of the width of the parent div
+- **multiline** & **row** which changes the input to a textarea field, you can also choose the number of lines with **row** (optional)
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [@eugene0m](https://github.com/eugene0m)
